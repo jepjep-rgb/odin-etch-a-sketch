@@ -1,11 +1,21 @@
 const gridContainer = document.querySelector('.sketchpad');
+const resetButton = document.querySelector('.reset');
 
 function changeColor() {
     this.style.backgroundColor = "black";
 }
 
-function createGrid() {
-    let gridLength = 16;
+function resetGrid() {
+    let newLength = prompt("Input new grid length (1-100):", 16);
+
+    if (newLength !== null){
+        newLength = parseInt(newLength);
+        createGrid(newLength);
+    }
+}
+
+function createGrid(length = 16) {
+    let gridLength = length;
     for(let row = 1; row <= gridLength; row++){
         const rowContainer = document.createElement('div');
         rowContainer.classList.add('row');
@@ -18,5 +28,7 @@ function createGrid() {
         gridContainer.appendChild(rowContainer);
     }
 }
+
+resetButton.addEventListener('click', resetGrid);
 
 createGrid();
