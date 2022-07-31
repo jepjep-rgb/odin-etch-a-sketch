@@ -3,21 +3,48 @@ body {
     padding: 0;
 }
 
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 2px red solid;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px red solid;
+    margin: 50px;
+}
+
+button {
+    box-sizing: border-box;
+    padding: 10px 2.5px;
+    width: 100px;
+}
+
 .sketchpad {
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
+    border: 2px red solid;
+    width: 75vh;
+    height: 75vh;
 }
 
 .row {
     display: flex;
     padding: 0;
     margin: 0;
+    flex: 1;
 }
 
 .grid {
-    width: 10px;
-    height: 10px;
-    border: .1px solid gray;
+    width: 1px;
+    height: auto;
+    flex: 1;
 }
