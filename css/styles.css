@@ -1,29 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Open+Sans:wght@400;600;700&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100;1,300&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 .main-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     border: 2px red solid;
+    background-color: #1A1A1D;
 }
 
 .settings {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    border: 2px red solid;
+    border: 10px #C3073F solid;
     margin: 50px;
+    padding: 12.5vh 20px;
+    width: 200px;
+    height: 50vh;
+    background-color: #6F2232;
 }
 
 button {
     box-sizing: border-box;
-    padding: 10px 2.5px;
-    width: 100px;
+    padding: 20px 5px;
+    width: 100%;
+    background-color: #6F2232;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #950740;
 }
 
 .sketchpad {
@@ -31,9 +48,10 @@ button {
     flex-direction: column;
     padding: 0;
     margin: 0;
-    border: 2px red solid;
+    border: 10px #C3073F solid;
     width: 75vh;
     height: 75vh;
+    background-color: white;
 }
 
 .row {
@@ -47,4 +65,23 @@ button {
     width: 1px;
     height: auto;
     flex: 1;
+}
+
+.footer {
+    background-color: #4E4E50;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #950740;
 }
