@@ -2,7 +2,23 @@ const gridContainer = document.querySelector('.sketchpad');
 const resetButton = document.querySelector('.reset');
 
 function changeColor() {
-    this.style.backgroundColor = "black";
+    let R = Math.floor(Math.random()*256);
+    let G = Math.floor(Math.random()*256);
+    let B = Math.floor(Math.random()*256);
+
+    console.log(this.style.backgroundColor);
+    if (this.style.backgroundColor === ''){
+        this.style.backgroundColor = `rgba(${R},${G},${B},.1)`;
+    } else {
+        let bgColor = window.getComputedStyle(this).backgroundColor;
+        // Create string array composed of the actual rgba values
+        let rgb = bgColor.replace(/^rgba?\(|\s+|\)$/g, '').split(',');
+        
+        for (let i in rgb) rgb[i] = parseFloat(rgb[i]);
+        if (rgb[3] < 1) rgb[3] += .1;
+
+        this.style.backgroundColor = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${rgb[3]})`
+    }
 }
 
 function clearGrid() {
