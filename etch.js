@@ -5,11 +5,18 @@ function changeColor() {
     this.style.backgroundColor = "black";
 }
 
+function clearGrid() {
+    while(gridContainer.firstChild){
+        gridContainer.removeChild(gridContainer.lastChild);
+    }
+}
+
 function resetGrid() {
     let newLength = prompt("Input new grid length (1-100):", 16);
 
     if (newLength !== null){
         newLength = parseInt(newLength);
+        clearGrid();
         createGrid(newLength);
     }
 }
